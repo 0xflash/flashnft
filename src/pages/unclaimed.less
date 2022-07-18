@@ -1,0 +1,83 @@
+.unclaimedWrap {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+  h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    > div {
+      width: 100%;
+    }
+  }
+  .operate {
+    margin: 12px 0;
+    button {
+      width: 100%;
+    }
+  }
+  .nftId {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 12px 0;
+    width: 100%;
+    > div {
+      flex: 0 0 calc(20% - 8px);
+      padding: 4px 0;
+      cursor: pointer;
+      border: 1px solid transparent;
+      margin: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .unclaimedWrap {
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .nftId {
+    > div {
+      flex: 0 0 calc(20% - 8px);
+      margin: 4px;
+    }
+  }
+}
+
+:global {
+  .ant-input:hover,
+  .ant-input:focus,
+  .ant-input-focused,
+  .ant-input-number:hover,
+  .ant-input-number:focus,
+  .ant-input-number-focused {
+    color: #000;
+    border-color: transparent;
+  }
+
+  .ant-btn,
+  .ant-btn:hover,
+  .ant-btn:active,
+  .ant-btn:focus,
+  .ant-btn[disabled],
+  .ant-btn[disabled]:hover,
+  .ant-btn[disabled]:focus,
+  .ant-btn[disabled]:active {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+  }
+
+  .ant-tag {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+  }
+}

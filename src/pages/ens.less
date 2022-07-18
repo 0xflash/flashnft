@@ -1,0 +1,55 @@
+.wrap {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+  input {
+    color: #000;
+  }
+  h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .record {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0;
+    width: 100%;
+    > span {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+    > div {
+      cursor: pointer;
+      border: 1px solid transparent;
+      margin: 4px;
+      a {
+        padding: 4px 8px;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #fff;
+      }
+    }
+    > div:hover {
+      border: 1px solid #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrap {
+    h2 {
+      font-size: 22px;
+    }
+  }
+}
+
+:global {
+  .ant-tag {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+  }
+}

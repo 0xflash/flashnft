@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json,sol}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-card": "^1.14.22",
+    "@ant-design/pro-layout": "^6.5.0",
+    "@ethersproject/providers": "^5.4.5",
+    "@ethersproject/units": "^5.4.0",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/frame-connector": "^6.0.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "@web3-react/network-connector": "^6.1.9",
+    "antd": "^4.16.13",
+    "dayjs": "^1.10.7",
+    "graphql": "^16.0.1",
+    "lodash": "^4.17.21",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "rekv": "^1.2.2",
+    "umi": "^3.5.19",
+    "urql": "^2.0.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.176",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.19",
+    "gh-pages": "^3.2.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}

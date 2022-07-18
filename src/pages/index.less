@@ -1,0 +1,139 @@
+.home {
+  padding: 48px 0;
+  text-align: center;
+  h2 {
+    color: #fff;
+    margin: 12px 0;
+    font-size: 32px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+.tools {
+  margin-top: 56px;
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+  > div > div {
+    margin: 0 24px;
+  }
+  > div > div:first-child {
+    background-color: #000;
+    border: 1px solid #fff;
+    > ul {
+      background-color: #000;
+      border-top: 1px solid #fff;
+      a {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.default {
+  background-color: #000;
+  border: 1px solid #fff;
+}
+
+.breathe {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation-timing-function: ease-in-out;
+  animation-name: breathe;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  img {
+    width: 100%;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    opacity: 0.4;
+    box-shadow: 0 1px 2px rgb(186 186 186 / 90%),
+      0 1px 1px rgb(0 147 223 / 10%) inset;
+  }
+
+  100% {
+    opacity: 1;
+    border: 1px solid rgb(106 106 106 / 40%);
+    box-shadow: 0 1px 30px #484848, 0 1px 20px #080808 inset;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home {
+    padding: 20px 0;
+    h2 {
+      font-size: 22px;
+      margin: 20px 20px 0;
+    }
+    p {
+      font-size: 14px;
+      margin: 0 20px;
+    }
+  }
+  .breathe {
+    width: 100px;
+    height: 100px;
+  }
+  .tools {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    > div {
+      padding-bottom: 24px;
+      > div {
+        margin: initial;
+      }
+    }
+  }
+}
+
+:global {
+  .ant-input:hover,
+  .ant-input:focus,
+  .ant-input-focused,
+  .ant-input-number:hover,
+  .ant-input-number:focus,
+  .ant-input-number-focused {
+    color: #000;
+    border-color: transparent;
+  }
+
+  .ant-btn,
+  .ant-btn:hover,
+  .ant-btn:active,
+  .ant-btn:focus .ant-btn[disabled],
+  .ant-btn[disabled]:hover,
+  .ant-btn[disabled]:focus,
+  .ant-btn[disabled]:active {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+  }
+
+  .ant-tag {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+  }
+
+  .ant-pro-card {
+    max-width: 300px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .ant-pro-card {
+      max-width: initial;
+    }
+  }
+}
